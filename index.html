@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandingPage</title>
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Mullish Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- CSS And Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAACUdJREFUeF7tnb9vFEcUx9+cAIkCSig4pEhERIogKWiSLoIiHZEjr4+kJn9B6Bzll0IXH2UshTrKeaRYpkoKTDpHSC4SUKREQXJBRRcokPDpJtnznb27t7vzZubN7MzuuEFwb96P7/vMm/XdcstA8jMYDC5MJpO3hBBvM8beAQHvAoPTdcsEALCMQfHvsphOXvcyKePKnwPAjhDiN8bY771e74/RaPSkzmu2Tzm7WeNvA8DAOC1iB+3sHbFIR+5GvV5vtQqEUgCSJFkFgM8B4IS1tKJjlwq8AoCvOefphs79LACQJMkjALiEzS7uRqxSru1KO/OYc345m0kOgCRJ7gPAVdepxnhOFdjmnF+bRzwEIEmS6wCw5TSVGMy+AuUj+gPO+b00+BSApaWlM8eOHdsDgJP2M8pHCP4ICbOAl+Px+LXNzc1nUwBWVla+F0LcVGl+mHWrVNhuW8bY3Y2NjU/YYDC4OJlM/mp3uYrV2aTbpm/FMnu93htsZWXlIyHED4prWzbHjaoPdjFj7OMUgG+FEJ8GW0UHE6caIoyxNZYkyQMAeI9MR6rsyBJqvyMDyX9NAUjfPz7VfpnKKzQQrw2SvUgBSDVo9MerJniVjP22NABAxxSu7KEfOjQAgH2qjyL4IbLLilVjtRwAVTm6Z68IQPt3VPsrzEOuCIDZDhECgFXeggIgQMzuJKoxMksButZgmVxOAZAlE193j2cEoOPURQCsApDf0e73t7y4IADwUTi5tGFYOAIgthCDQxMqOQIAU74tG3NZzT3Yqs3cL1tOEqH+S1ebJTEX1diDQ3mDnQC3bt2Cs2fPSrV++PAhcM6ldum7EPn/z4RYEqpJplSLACgKqmg+HA6h3+8ftqBq+fb2Nqyvr4faKut5kwGg2D/jwooAVDlsMwAUmpMBYNxRRQdGAFAop5ivr+YBA7AG/f55qa5tngDS4hEGJAA0saGMJgBCmK6YFABoopV6UkcA9HQrriKZADSpqHlZBKAc3ngE1OtqGQCdiYJbEyfAYmNxyuXX4QCQeZa9rra5UdZVABRTiROg0QmA6qWWkWwCzEHQBaABprV0kC2S1YGbALIoDbx+BEB9iboANFBSIyFbAEC9bu0DQLan1TiKAKjp1TrrCACqpbS7DhXSkVEEwJHQaRgfMQocgHPSz/Dbdw1AS2wOAHpC6T3Oyx+uDaF//uh+gKIspr8G0srsrzetCWCvrXihZO8DzD25nAA+6IJX8MBSCwBZkEUh6KXRAoA+DZkU+q87ytUKAPpV41am2twp3BI2XVkimssJgMseY2XYfYXlQQKQNnp4J39PYJWsYQKAgcTQZgZJmAAAQO0RkNkB3QBAYcsXuGknAJkiuwGA/jTQ/I8h+gGpVmpdBBIFV91vqvZ6aepFkUwAPad6BaitahIAtUz9to5HgKX+mG8dcw+Y0soBcBMbk1+lTdcnAFWLiCYAVTp4JqwB4LKUilguUyACANk4wspsAIBPD2+JVIbcDJvhAQBYa/I0yxzikrEBgJPyPAvidgIQFt8UADg8C4VqLSIUq8ZVBMCGzj42vCKnCIANAJBnqg1OVH1GAKwAIHGq2qWZO81ltcm0F4CZWvGzgHoYmwGAAGXyi0CCnHDDhCKQmo8662YAwClVa0UOAEFOobjIAlENQAEbNeawUuh7jQBgNfbxCCDI3VsA9JkmUEXdRTwC1DULfEWe0AhA4O00Td8jANRmp/UjQC0d0z40tt4jANQ0sA6AWjrBWnsGAH7btQ4AfOmksHkGAL62MAFoqMvx08B2fVk0JUbqE0AApA8YyD5jgDIh7AwIcwJgq1P8LgGDBqgDgK/BqqW3AKg2Q8leyRilfzcA+G69M8+CQHU9Y9QNAOIDI0q5mM6T6U2hAf54ewRUS+2lyhEAL9viLqkIgExr+usuWURnrx8dAQEWGdIRUCWvD7KTTQDXxYQEgLMtrRGIDACN2EZLIgBG8h0ubi0A84kU7wquB8UeANpnAm5hnABOJwCuKYsp6a6TFxcBkGuEsaicAPZah0lLbhM2AP6oa+0IsF3iAgAVAY+uAWxnJIeW3sK8JmsA2D4Owp4A9CjoenQIgG6KhXUz6CsByG4KAbD9ID49vE55QgDMx5EMkWyEOAFU1CrfROm/EgKQCVJy15AsXdXXUwDO9fu5O5MOfWRICeF9APtbp1rd+E2hquTN7ZW7prxANzOldXYmgFIKWOO8gJ07Asr4UWKq3DggAPKglAJQUuPOzg7s7u5iKdO2m0wmsLe3B0+fPtX20cRCAwCU8KuvTcPV2nAI5/vVzwyqDKgRC9OY8XgMW1tbMBqNMObN2RTqrwDAkkqEZWOPAMKQta6sA2CpJQYTwJW05XE6B4AluSMARMJanwBEeRbdRABmiphO2DIATH26uI45AMBappawlT0zyF7YSs8+TACdNjqdADoJVim+eA2Q8U4ZCAnTeH8MW/fkvwXIUpO9fpgO2rC+AKcAILVEmc0BINIBFbPOSGsCNJj8PHSwABh3LDqYKhA2AA52kIMQjaIYNgANSNc2IBQBaFv5DRDkWUhFADzLviId3zG1nx8+QisB8AHThRY4uEkGV3c+MxQAeJ5wKTRmlSvERVV1MWzEV/cZ7B1BcojUxZD7bJ9F/QSIGrav44WKUEdA61WQFhj6TqjOPwIgbb4LAxuA4XxGAFz01+MYKQD//v/p6ukmcsQxisyM1BkyZvhmz1MAfgaA98OvJVagocAvbHl5+UvG2Bcai+OSwBUQQnyVToAlAPgphFrilNfpUq1qH7LBYHBhMpn8o+Pa5Rrq5lP7s6WFzTx7vd7r0299T5LkRwAY2CrCL782JfWr0oVs8qWPOOc3pgDMpsCfAHBCXkLIAhLnruhO0VzeCn2LV71e783RaPTk8LkPSZKsAsA3tT49qkC/9jasXGyEYms+45zfTpXIPvgjPQoeAcClNkhUWUNBKUXhnEljMa/HnPPL80JyAMyuB+4DwFVnlcZALhXY5pxfywZcAOAAguXrACy9MDzpMjt7sSztJ1W3qvZ0grwEgBuc83tFl6UApEZLS0tnjh8/flsIcZMuj+iJWgEZU4yxu/v7+6ubm5vPymJXAjA3HgwGF4UQVwDgyvxPADhFXUhX/Mkahteh1NMLANhljKXfiLHLgO2ONkZ/1/n8D3qZUk3cl4PTAAAAAElFTkSuQmCC">
+</head>
+<body>
+    <section class="hero">
+        <nav class="navbar">
+            <a href="">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M27 9H5C4.44772 9 4 9.44772 4 10V25C4 25.5523 4.44772 26 5 26H27C27.5523 26 28 25.5523 28 25V10C28 9.44772 27.5523 9 27 9Z" stroke="#2D2D2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 3L16 9L22 3" stroke="#2D2D2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M23.5 16C24.3284 16 25 15.3284 25 14.5C25 13.6716 24.3284 13 23.5 13C22.6716 13 22 13.6716 22 14.5C22 15.3284 22.6716 16 23.5 16Z" fill="#2D2D2D"/>
+                        <path d="M23.5 22C24.3284 22 25 21.3284 25 20.5C25 19.6716 24.3284 19 23.5 19C22.6716 19 22 19.6716 22 20.5C22 21.3284 22.6716 22 23.5 22Z" fill="#2D2D2D"/>
+                        <path d="M19 26V9" stroke="#2D2D2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="logo__p">
+                        Landing<span class="logo__span">Page</span>
+                    </p>
+                </div>
+            </a>
+            <div class="menu">
+                <span class="menu__span">Contact</span>
+                <div class="buttons">
+                    <button class="buttons__button buttons__button--light">Get Started</button>
+                    <button class="buttons__button buttons__button--light buttons__button--light2">How it works</button>
+                    <button class="buttons__button buttons__button--dark2">
+                        Get Started
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.125 10H16.875" stroke="#F8F9FF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.25 4.375L16.875 10L11.25 15.625" stroke="#F8F9FF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </button>
+                    <button class="buttons__button buttons__button--dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.35156 14.4219C6.46094 17.0703 2.92969 17.0703 2.92969 17.0703C2.92969 17.0703 2.92969 13.5391 5.57812 12.6484" stroke="#F8F9FF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15.3047 8.23437L10 13.5391L6.46094 10L11.7656 4.69531C13.7734 2.6875 15.7813 2.71094 16.6406 2.83594C16.7732 2.85363 16.8963 2.91447 16.9909 3.00907C17.0855 3.10367 17.1464 3.22677 17.1641 3.35937C17.2891 4.21875 17.3125 6.22656 15.3047 8.23437Z" stroke="#F8F9FF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.4219 9.11719V14.1641C14.4195 14.3289 14.3521 14.4862 14.2344 14.6016L11.7109 17.1328C11.6309 17.2128 11.5306 17.2695 11.4208 17.297C11.3111 17.3244 11.1959 17.3215 11.0876 17.2886C10.9794 17.2558 10.882 17.1941 10.8061 17.1102C10.7301 17.0264 10.6783 16.9235 10.6562 16.8125L10 13.5391" stroke="#F8F9FF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.883 5.57812H5.83612C5.67127 5.58047 5.51402 5.64787 5.39862 5.76563L2.86737 8.28906C2.78741 8.36912 2.73068 8.46939 2.70323 8.57916C2.67579 8.68894 2.67866 8.8041 2.71154 8.91237C2.74442 9.02064 2.80608 9.11796 2.88994 9.19393C2.9738 9.2699 3.07671 9.32168 3.18769 9.34375L6.46112 10" stroke="#F8F9FF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <main class="content">
+            <div class="text">
+                <h1 class="text__heading">Build Landing Pages with Typeform embedded</h1>
+                <p class="text__p">With Anima, you can embed Typeform in just a few steps.</p>
+            </div>
+            <a href="#typeform"><button class="content__button">Go to the typeform</button></a>
+        </main>
+        <div class="bar">
+            <div class="line"></div>
+            <div class="logos">
+                <a href="https://www.w3schools.com/html/" target="_blank">
+                    <div id="logos_1" class="logos__logo"></div>
+                </a>
+                <a href="https://www.w3schools.com/angular/" target="_blank">
+                    <div id="logos_2" class="logos__logo"></div>
+                </a>
+                <a href="https://www.w3schools.com/css/" target="_blank">
+                    <div id="logos_3" class="logos__logo"></div>
+                </a>
+                <a href="https://www.figma.com/" target="_blank">
+                    <div id="logos_4" class="logos__logo"></div>
+                </a>
+                <a href="https://www.w3schools.com/sass/" target="_blank">
+                    <div id="logos_5" class="logos__logo"></div>
+                </a>
+                <a href="https://www.w3schools.com/bootstrap/" target="_blank">
+                    <div id="logos_6" class="logos__logo"></div>
+                </a>
+            </div>
+            <div class="line"></div>
+        </div>
+    </section>
+    <section class="features">
+        <div class="text">
+            <h2 class="text__heading">Features</h2>
+            <p class="text__p">Few good reasons why you should use Anima Landing Page Ui Kit to make your own pages.</p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="card__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="42" viewBox="0 0 43 42" fill="none">
+                        <path opacity="0.2" d="M11.935 35.8148C11.8129 35.9389 11.6673 36.0373 11.5068 36.1046C11.3462 36.1718 11.1739 36.2064 10.9999 36.2064C10.8258 36.2064 10.6535 36.1718 10.4929 36.1046C10.3324 36.0373 10.1868 35.9389 10.0647 35.8148L6.68501 32.4352C6.561 32.313 6.46252 32.1675 6.3953 32.0069C6.32808 31.8464 6.29346 31.6741 6.29346 31.5C6.29346 31.3259 6.32808 31.1536 6.3953 30.9931C6.46252 30.8325 6.561 30.687 6.68501 30.5648L24.1249 13.125L29.3749 18.375L11.935 35.8148Z" fill="#FF6250"/>
+                        <path d="M35.9375 21V28.875" stroke="#FF6250" stroke-width="2.375" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M32 24.9375H39.875" stroke="#FF6250" stroke-width="2.375" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.2812 6.5625V13.125" stroke="#FF6250" stroke-width="2.375" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11 9.84375H17.5625" stroke="#FF6250" stroke-width="2.375" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M28.0625 30.1875V35.4375" stroke="#FF6250" stroke-width="2.375" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25.4375 32.8125H30.6875" stroke="#FF6250" stroke-width="2.375" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M31.0857 6.17395L6.68882 30.5708C6.17626 31.0834 6.17626 31.9144 6.68882 32.4269L10.0821 35.8202C10.5947 36.3328 11.4257 36.3328 11.9383 35.8202L36.3351 11.4234C36.8477 10.9108 36.8477 10.0798 36.3351 9.56724L32.9418 6.17395C32.4293 5.66139 31.5982 5.66139 31.0857 6.17395Z" stroke="#FF6250" stroke-width="2.375" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M24.125 13.125L29.375 18.375" stroke="#FF6250" stroke-width="2.375" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="text">
+                    <h3 class="text__heading">Fast building</h3>
+                    <p class="text__p">Tailor Anima's Landing Page UI Kit to your unique style and brand with customisable components, in no time!</p>
+                </div>
+                <span class="card__span">
+                    Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                        <path d="M3.625 10H17.375" stroke="#009379" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.75 4.375L17.375 10L11.75 15.625" stroke="#009379" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="card">
+                <div class="card__icon card__icon--green">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="42" viewBox="0 0 43 42" fill="none">
+                        <path opacity="0.2" d="M29.5391 11.2875C30.2901 12.6551 30.685 14.1897 30.6875 15.75V16.3898C30.6901 16.9824 30.4897 17.5579 30.1195 18.0207C29.7493 18.4834 29.2318 18.8053 28.6531 18.9328C26.3055 19.4575 23.9054 19.7107 21.5 19.6875C19.0946 19.7107 16.6945 19.4575 14.3469 18.9328C13.7682 18.8053 13.2507 18.4834 12.8805 18.0207C12.5103 17.5579 12.3099 16.9824 12.3125 16.3898V15.8812C12.3135 14.2708 12.7317 12.6881 13.5266 11.2875C7.37422 12.5508 3.125 15.2578 3.125 18.375C3.125 22.7226 11.3445 26.25 21.5 26.25C31.6555 26.25 39.875 22.7226 39.875 18.375C39.875 15.2578 35.6586 12.5672 29.5391 11.2875Z" fill="#009379"/>
+                        <path d="M28.1938 30.9586L28.8337 34.8305" stroke="#009379" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.5 31.5V36.75" stroke="#009379" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.8063 30.9586L14.1665 34.8305" stroke="#009379" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M29.5391 11.2875C35.6586 12.5672 39.875 15.2578 39.875 18.375C39.875 22.7226 31.6555 26.25 21.5 26.25C11.3445 26.25 3.125 22.7226 3.125 18.375C3.125 15.2578 7.37422 12.5508 13.5266 11.2875" stroke="#009379" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12.3125 16.3898C12.3099 16.9824 12.5104 17.558 12.8805 18.0207C13.2507 18.4834 13.7682 18.8053 14.3469 18.9328C16.6945 19.4575 19.0946 19.7107 21.5 19.6875C23.9054 19.7107 26.3056 19.4575 28.6532 18.9328C29.2318 18.8053 29.7494 18.4834 30.1195 18.0207C30.4897 17.558 30.6902 16.9824 30.6875 16.3898V15.75C30.6876 14.5337 30.4462 13.3296 29.9773 12.2074C29.5085 11.0851 28.8214 10.0672 27.9561 9.2125C27.0908 8.35784 26.0643 7.68351 24.9364 7.2286C23.8084 6.7737 22.6013 6.54728 21.3852 6.56249C16.3321 6.62811 12.3125 10.8445 12.3125 15.8812V16.3898Z" stroke="#009379" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="text">
+                    <h3 class="text__heading">Responsive Design</h3>
+                    <p class="text__p">No need to worry about screen size. Anima's Landing Page UI Kit adapts to any screen size, from desktop to mobile.</p>
+                </div>
+                <span class="card__span">
+                    Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                        <path d="M3.625 10H17.375" stroke="#009379" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.75 4.375L17.375 10L11.75 15.625" stroke="#009379" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="card">
+                <div class="card__icon card__icon--yellow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="42" viewBox="0 0 43 42" fill="none">
+                        <path opacity="0.2" d="M5.93047 12.239C5.81159 12.4432 5.74929 12.6754 5.75001 12.9117V29.0882C5.75126 29.3219 5.81411 29.5511 5.9322 29.7527C6.0503 29.9544 6.21947 30.1213 6.42266 30.2367L20.8602 38.3578C21.0548 38.469 21.2759 38.5257 21.5 38.5218L21.6477 21L5.93047 12.239Z" fill="#F8D57E"/>
+                        <path d="M37.25 29.0882V12.9117C37.2487 12.678 37.1859 12.4488 37.0678 12.2472C36.9497 12.0456 36.7805 11.8786 36.5773 11.7632L22.1398 3.64215C21.9453 3.52983 21.7246 3.4707 21.5 3.4707C21.2754 3.4707 21.0547 3.52983 20.8602 3.64215L6.42266 11.7632C6.21947 11.8786 6.05029 12.0456 5.9322 12.2472C5.8141 12.4488 5.75125 12.678 5.75 12.9117V29.0882C5.75125 29.3219 5.8141 29.5511 5.9322 29.7527C6.05029 29.9544 6.21947 30.1213 6.42266 30.2367L20.8602 38.3578C21.0547 38.4701 21.2754 38.5292 21.5 38.5292C21.7246 38.5292 21.9453 38.4701 22.1398 38.3578L36.5773 30.2367C36.7805 30.1213 36.9497 29.9544 37.0678 29.7527C37.1859 29.5511 37.2487 29.3219 37.25 29.0882V29.0882Z" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M29.5391 25.0195V16.4883L13.625 7.71094" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M37.0697 12.239L21.6479 21L5.93066 12.239" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.6477 21L21.5 38.5219" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="text">
+                    <h3 class="text__heading">No Code Needed</h3>
+                    <p class="text__p text__p--last">Zero coding skills required, Anima's Landing Page UI Kit empowers you to create stunning landing pages with ease.</p>
+                </div>
+                <span class="card__span">
+                    Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                        <path d="M3.625 10H17.375" stroke="#009379" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.75 4.375L17.375 10L11.75 15.625" stroke="#009379" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </section>
+    <section class="metrics">
+        <div class="text">
+            <h2 class="text__heading">Our Metrics Tell the Story</h2>
+            <p class="text__p">Our metrics component gives you the inside scoop on your success and helps you stay on top of your game in style.</p>
+        </div>
+        <div class="wrapper">
+            <div class="item">
+                <div class="item__line"></div>
+                <div class="text">
+                    <h3 class="text__heading">10k+</h3> 
+                    <p class="text__p">Website launched</p> 
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__line"></div>
+                <div class="text">
+                    <h3 class="text__heading">931k+</h3> 
+                    <p class="text__p">Projects created with Anima</p> 
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__line"></div>
+                <div class="text">
+                    <h3 class="text__heading">240k+</h3> 
+                    <p class="text__p">New users joined Anima</p> 
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__line"></div>
+                <div class="text">
+                    <h3 class="text__heading">12k+</h3> 
+                    <p class="text__p">Teams used Anima</p> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="text">
+            <h2 class="text__heading">Real Stories from Satisfied Customers</h2>
+            <p class="text__p">See how our landing page ui kit is making an impact.</p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="info">
+                    <img class="info__img" src="https://imgs.search.brave.com/W1GgavmNKwM7iofvNCZZfMmbClc2WFrcKmtpI2ZUX24/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQz/NjgwMjM1L3Bob3Rv/L3BvcnRyYWl0LW9m/LWJlYXV0aWZ1bC13/b21lbi5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9RFFVMWY4/TXJTOGl6ZkxYeWtE/Z3diR19KVk4yc05h/U2lqdUc3WjgyRGFE/az0" alt="" srcset="">
+                    <div class="person">
+                        <h3 class="person__name">Lauren M.</h3>
+                        <p class="person__profession">UI Designer @Boo</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="details__rating details__rating--top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p class="details__p">"Anima’s Landing Page UI Kit has become a staple in my design toolkit. This kit has everything I need to get the job done quickly and efficiently."</p>
+                    <div class="details__rating details__rating--bottom">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="info">
+                    <img class="info__img" src="https://imgs.search.brave.com/8G6JJH2oqYEZ1khETuINfRj2WC8US6JrAVcj07U6xys/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA3LzAyLzk4Lzcw/LzM2MF9GXzcwMjk4/NzAyN19ObkJVUExv/S0RwcENKbDBYSkpK/Um0xNUUxc1FveTlJ/MS5qcGc" alt="" srcset="">
+                    <div class="person">
+                        <h3 class="person__name">David B.</h3>
+                        <p class="person__profession">Lead Designer @Creative</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="details__rating details__rating--top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p class="details__p">“The Landing Page UI Kit has been a game changer. The pre-designed components and templates have helped us deliver projects faster!”</p>
+                    <div class="details__rating details__rating--bottom">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                            <path d="M14.0077 20.2404L19.8226 23.9325C20.5725 24.4055 21.4956 23.7017 21.2763 22.8364L19.5919 16.2138C19.5463 16.0302 19.5535 15.8375 19.6127 15.6579C19.6719 15.4783 19.7807 15.319 19.9264 15.1985L25.1414 10.8488C25.8222 10.2835 25.476 9.14125 24.5876 9.08356L17.7804 8.64513C17.5947 8.63432 17.4161 8.56965 17.2666 8.459C17.117 8.34836 17.0029 8.19654 16.9382 8.0221L14.3999 1.63027C14.3327 1.44556 14.2103 1.28599 14.0493 1.17324C13.8883 1.06048 13.6966 1 13.5 1C13.3034 1 13.1117 1.06048 12.9507 1.17324C12.7897 1.28599 12.6673 1.44556 12.6001 1.63027L10.0618 8.0221C9.9971 8.19654 9.883 8.34836 9.73343 8.459C9.58385 8.56965 9.40529 8.63432 9.21955 8.64513L2.41237 9.08356C1.52397 9.14125 1.17784 10.2835 1.85856 10.8488L7.07356 15.1985C7.21932 15.319 7.32806 15.4783 7.38726 15.6579C7.44645 15.8375 7.4537 16.0302 7.40815 16.2138L5.85057 22.3518C5.58521 23.3902 6.69282 24.2324 7.58121 23.6671L12.9923 20.2404C13.1441 20.1439 13.3202 20.0927 13.5 20.0927C13.6798 20.0927 13.8559 20.1439 14.0077 20.2404Z" fill="#F8D57E" stroke="#F8D57E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team">
+        <div class="text">
+            <h2 class="text__heading">Meet our team</h2>
+            <p class="text__p">Get to know the faces behind the scenes and learn about the values that drive us.</p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="profile">
+                    <img class="profile__img" src="https://imgs.search.brave.com/2IfC2eGjE1ZQDMMgjVjBxKHuuGw9_W7M3ktNpVu8UL8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzhlL2Fj/LzAyLzhlYWMwMjA1/MGNmOGYwN2NlZDdl/YjUxN2JkNmQwN2E1/LmpwZw" alt="" srcset="">
+                    <div class="info">
+                        <h3 class="info__heading">Sarah K.</h3>
+                        <p class="info__p">Lead Designer</p>
+                    </div>
+                </div>
+                <p class="card__p">With a passion for color and a love for clean lines, Sarah brings all our wildest design dreams to life.</p>
+                <div class="socials">
+                    <a class="socials__link" href="https://twitter.com/animaapp" target="_blank">Twitter</a>
+                    <a class="socials__link" href="https://dribbble.com/animaapp" target="_blank">Dribbble</a>
+                    <a class="socials__link" href="https://il.linkedin.com/company/anima-app" target="_blank">Linkedin</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="profile">
+                    <img class="profile__img" src="https://imgs.search.brave.com/txtoWPqAO2Rbuochv5BQLJ5SoynDPLAqGA8H8ENHJ80/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzg3LzM1Lzk5/LzM2MF9GXzI4NzM1/OTkxNF9IVTNQN3Jo/bXlKTXl5aEJCY0lM/Y1dkMlM3RER3a0pT/cy5qcGc" alt="" srcset="">
+                    <div class="info">
+                        <h3 class="info__heading">Michael L.</h3>
+                        <p class="info__p">Product Designer</p>
+                    </div>
+                </div>
+                <p class="card__p">Michael got a sharp eye for detail and the ability to turn any boring interface into a work of art.</p>
+                <div class="socials">
+                    <a class="socials__link" href="https://twitter.com/animaapp" target="_blank">Twitter</a>
+                    <a class="socials__link" href="https://dribbble.com/animaapp" target="_blank">Dribbble</a>
+                    <a class="socials__link" href="https://il.linkedin.com/company/anima-app" target="_blank">Linkedin</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="profile">
+                    <img class="profile__img" src="https://imgs.search.brave.com/W1GgavmNKwM7iofvNCZZfMmbClc2WFrcKmtpI2ZUX24/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQz/NjgwMjM1L3Bob3Rv/L3BvcnRyYWl0LW9m/LWJlYXV0aWZ1bC13/b21lbi5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9RFFVMWY4/TXJTOGl6ZkxYeWtE/Z3diR19KVk4yc05h/U2lqdUc3WjgyRGFE/az0" alt="" srcset="">
+                    <div class="info">
+                        <h3 class="info__heading">Lauren M.</h3>
+                        <p class="info__p">UX Designer</p>
+                    </div>
+                </div>
+                <p class="card__p">Lauren is the mastermind behind all the seamless user experiences you love. She's a wizard at making things intuitive.</p>
+                <div class="socials">
+                    <a class="socials__link" href="https://twitter.com/animaapp" target="_blank">Twitter</a>
+                    <a class="socials__link" href="https://dribbble.com/animaapp" target="_blank">Dribbble</a>
+                    <a class="socials__link" href="https://il.linkedin.com/company/anima-app" target="_blank">Linkedin</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="subscribe">
+        <div class="item">
+            <div class="text">
+                <h2 class="text__heading">Subscribe now</h2>
+                <p class="text__p">Never miss a beat on new landing page designs and features.</p>
+            </div>
+            <form class="field" action="index.html" method="get">
+                <input type="email" name="email" class="field__input" placeholder="Enter your email here" required>
+                <button type="submit" class="field__button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                        <path d="M18 4.54395L10.5 11.4189L3 4.54395" stroke="#F8F9FF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 4.54395H18V15.1689C18 15.3347 17.9342 15.4937 17.8169 15.6109C17.6997 15.7281 17.5408 15.7939 17.375 15.7939H3.625C3.45924 15.7939 3.30027 15.7281 3.18306 15.6109C3.06585 15.4937 3 15.3347 3 15.1689V4.54395Z" stroke="#F8F9FF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.13281 10.1689L3.19531 15.6143" stroke="#F8F9FF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.8047 15.6143L11.8672 10.1689" stroke="#F8F9FF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+    <section class="typeform" id="typeform">
+        <div class="text">
+            <h2 class="text__heading">Add your Typeform headline here</h2>
+            <p class="text__p">Follow the instructions to embed your Typeform in the screen below.</p>
+        </div>
+        <div class="quiz">
+            <svg class="quiz__speaker" width="58" height="4" viewBox="0 0 58 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10.0996" y="0.882812" width="40.8521" height="3.03858" rx="1.51929" fill="#CECECE"/>
+                <ellipse cx="55.5095" cy="2.4021" rx="1.51929" ry="1.51929" fill="#CECECE"/>
+                <ellipse cx="1.82789" cy="2.4021" rx="1.51929" ry="1.51929" fill="#CECECE"/>
+            </svg>
+            <div class="notch">
+                <div class="group">
+                    <div class="group__circle"></div>
+                    <div class="group__circle"></div>
+                    <div class="group__circle"></div>
+                </div>
+                <div class="group__search"></div>
+            </div>                 
+            <div class="screen">
+                <div class="content">
+                    <div class="header">
+                        <h3 class="header__heading">What do you want to ask your prospects?*</h3>
+                        <p class="header__description">Description (optional)</p>
+                    </div>
+                    <div class="answers">
+                        <div class="answers__answer">
+                            <div class="box">
+                                <span class="box__span">A</span>
+                            </div>
+                            <p>Answer A</p>
+                        </div>
+                        <div class="answers__answer">
+                            <div class="box">
+                                <span class="box__span">B</span>
+                            </div>
+                            <p>Answer B</p>
+                        </div>
+                        <div class="answers__answer">
+                            <div class="box">
+                                <span class="box__span">C</span>
+                            </div>
+                            <p>Answer C</p>
+                        </div>
+                        <p class="answers__add">Add choice</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="FAQ">
+        <div class="text">
+            <h2 class="text__heading">FACTS & QUESTIONS</h2>
+            <p class="text__p">Here are the answers to the most frequently asked questions about us.</p>
+        </div>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    What is your product/service about?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Could you provide an in-depth explanation of your product or service, including its name and a comprehensive overview of its purpose, features, and benefits? I'm interested in understanding how it addresses specific needs or pain points and how it stands out in the market.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How does your product/service work?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Can you walk me through the functionality and inner workings of your product or service? I'm looking for a detailed explanation of how users interact with it, the main processes or workflows involved, and any key technical aspects that make it effective and reliable.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    What makes your product/service different from competitors?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>In what ways does your product or service differentiate itself from others in the same space? I'm curious to learn about its unique features, capabilities, or approaches that set it apart from competitors and provide added value to users. Additionally, how do these distinctions contribute to a better user experience or outcome?</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Is your product/service suitable for my needs?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>Can you provide insights into the specific use cases or industries where your product or service excels? I'd like to know if it's adaptable to different scenarios and if there are any customization options available to tailor it to specific requirements. Additionally, I'm interested in hearing about success stories or testimonials from users with similar needs or challenges.</p>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFour">
+                    How can I get started or purchase your product/service?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>Could you outline the steps I need to take to begin using your product or service? Whether it's signing up for a trial, scheduling a demo, or making a purchase, I'd appreciate clear guidance on how to proceed. Additionally, are there any resources or support channels available to assist me throughout the onboarding process and beyond?</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="icons icons--main">
+            <a href="https://www.instagram.com/animaapp/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.1689C0 7.33239 7.16344 0.168945 16 0.168945C24.8366 0.168945 32 7.33239 32 16.1689C32 25.0055 24.8366 32.1689 16 32.1689C7.16344 32.1689 0 25.0055 0 16.1689Z" fill="#4E4D4D"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0009 7.63574C13.6834 7.63574 13.3925 7.64588 12.4823 7.6873C11.5739 7.7289 10.9538 7.87272 10.4112 8.08375C9.84993 8.3017 9.37384 8.59326 8.89952 9.06776C8.42485 9.54207 8.13329 10.0182 7.91462 10.5792C7.70307 11.122 7.55906 11.7423 7.51818 12.6504C7.47746 13.5606 7.4668 13.8516 7.4668 16.1692C7.4668 18.4867 7.47711 18.7767 7.51835 19.6869C7.56013 20.5953 7.70395 21.2154 7.9148 21.758C8.13294 22.3193 8.4245 22.7954 8.89899 23.2697C9.37313 23.7444 9.84922 24.0366 10.4101 24.2546C10.9531 24.4656 11.5733 24.6094 12.4816 24.651C13.3918 24.6925 13.6825 24.7026 15.9999 24.7026C18.3176 24.7026 18.6075 24.6925 19.5178 24.651C20.4262 24.6094 21.047 24.4656 21.59 24.2546C22.151 24.0366 22.6264 23.7444 23.1006 23.2697C23.5752 22.7954 23.8668 22.3193 24.0855 21.7582C24.2952 21.2154 24.4392 20.5952 24.4819 19.6871C24.5228 18.7768 24.5335 18.4867 24.5335 16.1692C24.5335 13.8516 24.5228 13.5608 24.4819 12.6505C24.4392 11.7421 24.2952 11.122 24.0855 10.5794C23.8668 10.0182 23.5752 9.54207 23.1006 9.06776C22.6259 8.59309 22.1512 8.30153 21.5894 8.08375C21.0454 7.87272 20.425 7.7289 19.5165 7.6873C18.6063 7.64588 18.3165 7.63574 15.9983 7.63574H16.0009ZM15.2354 9.17351C15.4626 9.17316 15.7161 9.17351 16.0009 9.17351C18.2793 9.17351 18.5494 9.18169 19.4491 9.22258C20.2811 9.26062 20.7327 9.39965 21.0335 9.51645C21.4317 9.67112 21.7156 9.85601 22.0141 10.1547C22.3128 10.4533 22.4977 10.7378 22.6527 11.136C22.7695 11.4365 22.9087 11.888 22.9466 12.72C22.9875 13.6196 22.9963 13.8898 22.9963 16.1672C22.9963 18.4445 22.9875 18.7148 22.9466 19.6143C22.9085 20.4463 22.7695 20.8979 22.6527 21.1983C22.498 21.5966 22.3128 21.8801 22.0141 22.1786C21.7154 22.4773 21.4319 22.6622 21.0335 22.8169C20.733 22.9342 20.2811 23.0729 19.4491 23.1109C18.5495 23.1518 18.2793 23.1607 16.0009 23.1607C13.7223 23.1607 13.4522 23.1518 12.5527 23.1109C11.7207 23.0725 11.2691 22.9335 10.9681 22.8167C10.5699 22.662 10.2855 22.4771 9.98679 22.1784C9.68812 21.8798 9.50323 21.596 9.3482 21.1976C9.2314 20.8972 9.0922 20.4456 9.05433 19.6136C9.01344 18.7141 9.00527 18.4438 9.00527 16.1651C9.00527 13.8863 9.01344 13.6175 9.05433 12.7179C9.09238 11.8859 9.2314 11.4343 9.3482 11.1335C9.50287 10.7353 9.68812 10.4509 9.98679 10.1522C10.2855 9.85352 10.5699 9.66863 10.9681 9.5136C11.2689 9.39627 11.7207 9.2576 12.5527 9.21938C13.3399 9.18382 13.645 9.17316 15.2354 9.17138V9.17351ZM20.556 10.5904C19.9906 10.5904 19.532 11.0486 19.532 11.6141C19.532 12.1794 19.9906 12.6381 20.556 12.6381C21.1213 12.6381 21.58 12.1794 21.58 11.6141C21.58 11.0487 21.1213 10.5904 20.556 10.5904ZM16.0009 11.7869C13.5808 11.7869 11.6187 13.749 11.6187 16.1691C11.6187 18.5893 13.5808 20.5505 16.0009 20.5505C18.4211 20.5505 20.3825 18.5893 20.3825 16.1691C20.3825 13.749 18.4211 11.7869 16.0009 11.7869ZM16.0009 13.3247C17.5718 13.3247 18.8454 14.5981 18.8454 16.1691C18.8454 17.74 17.5718 19.0136 16.0009 19.0136C14.4299 19.0136 13.1564 17.74 13.1564 16.1691C13.1564 14.5981 14.4299 13.3247 16.0009 13.3247Z" fill="white"/>
+                </svg>
+            </a>
+            <a href="https://dribbble.com/animaapp" target="_blank">
+                <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.1689C0 7.33239 7.16344 0.168945 16 0.168945C24.8366 0.168945 32 7.33239 32 16.1689C32 25.0055 24.8366 32.1689 16 32.1689C7.16344 32.1689 0 25.0055 0 16.1689Z" fill="#4E4D4D"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.5335 16.1572C24.5335 16.7343 24.4747 17.3106 24.3593 17.8724C24.2468 18.4208 24.0801 18.9592 23.8618 19.4739C23.6485 19.9795 23.3839 20.4667 23.0747 20.921C22.7701 21.3725 22.4192 21.7961 22.0338 22.1822C21.6475 22.5667 21.2225 22.9166 20.7712 23.2224C20.3154 23.5295 19.8275 23.7937 19.3216 24.008C18.8061 24.2252 18.2665 24.3916 17.7186 24.5039C17.1561 24.6196 16.5777 24.6787 15.9997 24.6787C15.4214 24.6787 14.843 24.6196 14.2813 24.5039C13.7326 24.3916 13.1929 24.2252 12.6779 24.008C12.1721 23.7937 11.6837 23.5295 11.2278 23.2224C10.7766 22.9166 10.3516 22.5667 9.96611 22.1822C9.58027 21.7961 9.2294 21.3725 8.92439 20.921C8.61687 20.4667 8.35184 19.9794 8.13768 19.4739C7.9193 18.9592 7.75224 18.4208 7.63931 17.8724C7.52515 17.3106 7.4668 16.7343 7.4668 16.1572C7.4668 15.5797 7.52511 15.0022 7.63934 14.4417C7.75227 13.8933 7.91934 13.354 8.13771 12.8402C8.35187 12.3342 8.6169 11.8466 8.92442 11.3922C9.22943 10.9403 9.5803 10.5176 9.96614 10.131C10.3516 9.74653 10.7766 9.39747 11.2279 9.09206C11.6837 8.78372 12.1721 8.51954 12.6779 8.30482C13.193 8.08716 13.7326 7.92034 14.2814 7.80884C14.8431 7.69401 15.4214 7.63574 15.9998 7.63574C16.5777 7.63574 17.1561 7.69401 17.7186 7.80884C18.2665 7.92037 18.8061 8.0872 19.3216 8.30482C19.8275 8.51951 20.3154 8.78372 20.7713 9.09206C21.2225 9.39747 21.6476 9.74653 22.0338 10.131C22.4193 10.5176 22.7701 10.9403 23.0747 11.3922C23.3839 11.8466 23.6485 12.3343 23.8618 12.8402C24.0801 13.354 24.2468 13.8933 24.3593 14.4417C24.4747 15.0022 24.5335 15.5797 24.5335 16.1572ZM12.8904 9.57512C10.8582 10.5334 9.34143 12.4033 8.86848 14.6568C9.0606 14.6585 12.0974 14.6968 15.5963 13.7685C14.335 11.5307 12.9875 9.70456 12.8904 9.57512ZM16.2001 14.889C12.4479 16.0108 8.84724 15.93 8.71808 15.9251C8.71597 16.0033 8.71223 16.079 8.71223 16.1572C8.71223 18.0267 9.41851 19.731 10.5794 21.0196C10.5769 21.0159 12.5712 17.4829 16.5039 16.213C16.5989 16.1814 16.6956 16.1531 16.7914 16.1256C16.6085 15.7121 16.4089 15.2976 16.2001 14.889ZM20.8125 10.6957C19.5295 9.56596 17.8448 8.8807 15.9997 8.8807C15.4076 8.8807 14.833 8.95228 14.2825 9.08459C14.3917 9.23107 15.7605 11.0444 17.0068 13.3295C19.7566 12.3001 20.7945 10.7223 20.8125 10.6957ZM17.2882 17.3314C17.2719 17.3368 17.2557 17.3414 17.2398 17.3472C12.9401 18.844 11.536 21.8605 11.5208 21.8934C12.7579 22.8542 14.3097 23.4338 15.9998 23.4338C17.009 23.4338 17.9703 23.2286 18.8449 22.8571C18.737 22.2213 18.3136 19.9927 17.2882 17.3314ZM20.072 22.1922C21.7083 21.0896 22.8705 19.3387 23.1946 17.3106C23.0446 17.2623 21.0058 16.6178 18.6536 16.9944C19.6095 19.6174 19.9978 21.7536 20.072 22.1922ZM17.5678 14.4138C17.7369 14.7608 17.9007 15.114 18.0519 15.469C18.1057 15.5964 18.1582 15.7212 18.2095 15.846C20.7129 15.5314 23.1793 16.0607 23.2847 16.0823C23.2681 14.3572 22.6501 12.774 21.6276 11.5345C21.6138 11.554 20.445 13.2404 17.5678 14.4138Z" fill="white"/>
+                </svg>  
+            </a>
+            <a href="https://github.com/AnimaApp" target="_blank">
+                <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16.1689" r="16" fill="#4E4D4D"/>
+                    <path d="M16.0001 4.16895C9.3735 4.16895 4 9.67742 4 16.4728C4 21.9089 7.43839 26.5209 12.2064 28.1478C12.8061 28.2617 13.0263 27.8809 13.0263 27.5559C13.0263 27.2625 13.0152 26.2933 13.01 25.2652C9.67157 26.0095 8.96712 23.8135 8.96712 23.8135C8.42125 22.3914 7.63473 22.0132 7.63473 22.0132C6.54596 21.2496 7.7168 21.2653 7.7168 21.2653C8.92181 21.3521 9.55632 22.5332 9.55632 22.5332C10.6266 24.4142 12.3636 23.8704 13.0484 23.556C13.1561 22.7608 13.4671 22.218 13.8102 21.9107C11.1449 21.5996 8.34295 20.5446 8.34295 15.8301C8.34295 14.4868 8.81172 13.3893 9.57937 12.5276C9.45477 12.2177 9.04402 10.9663 9.69562 9.27156C9.69562 9.27156 10.7033 8.94088 12.9965 10.5327C13.9537 10.2601 14.9803 10.1234 16.0001 10.1187C17.0199 10.1234 18.0473 10.2601 19.0063 10.5327C21.2967 8.94088 22.303 9.27156 22.303 9.27156C22.9562 10.9663 22.5452 12.2177 22.4206 12.5276C23.1901 13.3893 23.6557 14.4868 23.6557 15.8301C23.6557 20.5558 20.8484 21.5963 18.1762 21.901C18.6067 22.2828 18.9902 23.0315 18.9902 24.1794C18.9902 25.8257 18.9763 27.1507 18.9763 27.5559C18.9763 27.8833 19.1923 28.267 19.8006 28.1462C24.566 26.5174 28 21.9071 28 16.4728C28 9.67742 22.6273 4.16895 16.0001 4.16895Z" fill="white"/>
+                    <path d="M8.58043 21.7501C8.55405 21.8106 8.46043 21.8288 8.37514 21.7872C8.28827 21.7475 8.23947 21.665 8.26764 21.6042C8.29342 21.5419 8.38724 21.5246 8.47392 21.5663C8.56099 21.6061 8.61058 21.6894 8.58043 21.7501Z" fill="white"/>
+                    <path d="M9.06559 22.3004C9.00846 22.3543 8.89679 22.3293 8.82103 22.2441C8.74268 22.1592 8.728 22.0456 8.78592 21.991C8.84483 21.9371 8.95312 21.9623 9.03167 22.0473C9.11002 22.1332 9.12529 22.246 9.06559 22.3004Z" fill="white"/>
+                    <path d="M9.53784 23.0021C9.46445 23.0539 9.34445 23.0053 9.27027 22.897C9.19688 22.7886 9.19688 22.6587 9.27186 22.6067C9.34624 22.5546 9.46445 22.6014 9.53963 22.709C9.61282 22.8191 9.61282 22.949 9.53784 23.0021Z" fill="white"/>
+                    <path d="M10.1848 23.6799C10.1192 23.7535 9.97936 23.7338 9.87701 23.6333C9.77229 23.5351 9.74313 23.3957 9.80898 23.322C9.87543 23.2482 10.0161 23.269 10.1192 23.3686C10.2231 23.4667 10.2549 23.6071 10.1848 23.6799Z" fill="white"/>
+                    <path d="M11.0774 24.0735C11.0485 24.1689 10.9138 24.2123 10.7781 24.1717C10.6426 24.13 10.554 24.0182 10.5813 23.9218C10.6095 23.8258 10.7448 23.7806 10.8814 23.8239C11.0167 23.8655 11.1056 23.9765 11.0774 24.0735Z" fill="white"/>
+                    <path d="M12.0576 24.1465C12.061 24.247 11.946 24.3303 11.8036 24.3321C11.6604 24.3354 11.5445 24.2541 11.5429 24.1552C11.5429 24.0537 11.6554 23.9712 11.7986 23.9688C11.941 23.966 12.0576 24.0467 12.0576 24.1465Z" fill="white"/>
+                    <path d="M12.9699 23.9886C12.9869 24.0866 12.8879 24.1873 12.7465 24.2141C12.6075 24.2399 12.4787 24.1794 12.4611 24.0822C12.4438 23.9817 12.5446 23.881 12.6834 23.855C12.8251 23.83 12.9518 23.8889 12.9699 23.9886Z" fill="white"/>
+                </svg>                    
+            </a>
+            <a href="https://twitter.com/animaapp" target="_blank">
+                <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.1689C0 7.33239 7.16344 0.168945 16 0.168945C24.8366 0.168945 32 7.33239 32 16.1689C32 25.0055 24.8366 32.1689 16 32.1689C7.16344 32.1689 0 25.0055 0 16.1689Z" fill="#4E4D4D"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5208 13.174L15.5544 13.7277L14.9948 13.6599C12.9579 13.4 11.1784 12.5187 9.66756 11.0386L8.92891 10.3042L8.73865 10.8465C8.33575 12.0555 8.59316 13.3322 9.43253 14.1909C9.8802 14.6655 9.77948 14.7333 9.00725 14.4508C8.73865 14.3604 8.50363 14.2926 8.48124 14.3265C8.4029 14.4056 8.6715 15.4338 8.88414 15.8405C9.17513 16.4055 9.76828 16.9591 10.4174 17.2868L10.9658 17.5466L10.3167 17.5579C9.68994 17.5579 9.66756 17.5692 9.73471 17.8065C9.95854 18.5409 10.8427 19.3205 11.8276 19.6595L12.5214 19.8968L11.9171 20.2583C11.0218 20.7781 9.96973 21.0718 8.91772 21.0944C8.41409 21.1057 8 21.1509 8 21.1848C8 21.2978 9.36538 21.9305 10.16 22.1791C12.5438 22.9135 15.3753 22.5972 17.5017 21.343C19.0126 20.4504 20.5235 18.6765 21.2286 16.9591C21.6091 16.0439 21.9896 14.3717 21.9896 13.5695C21.9896 13.0498 22.0232 12.982 22.6499 12.3605C23.0192 11.999 23.3662 11.6035 23.4333 11.4905C23.5452 11.2759 23.534 11.2759 22.9633 11.4679C22.012 11.8069 21.8777 11.7617 22.3477 11.2533C22.6947 10.8917 23.1088 10.2364 23.1088 10.0443C23.1088 10.0104 22.9409 10.0669 22.7506 10.1686C22.5492 10.2816 22.1015 10.4511 21.7658 10.5527L21.1614 10.7448L20.613 10.372C20.3108 10.1686 19.8856 9.94262 19.6617 9.87482C19.0909 9.71664 18.218 9.73924 17.7032 9.92002C16.3042 10.4285 15.4201 11.7391 15.5208 13.174Z" fill="white"/>
+                </svg>                    
+            </a>
+        </div>
+        <div class="icons icons--secondary">
+            <a href="https://www.youtube.com/channel/UCXqr0Ca-b73rU9zcpSBJ5cw" target="_blank">
+                <div class="circle">
+                    <svg class="circle__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/animaapp/" target="_blank">
+                <div class="circle">
+                    <svg class="circle__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="https://github.com/AnimaApp" target="_blank">
+                <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16.1689" r="16" fill="#4E4D4D"/>
+                    <path d="M16.0001 4.16895C9.3735 4.16895 4 9.67742 4 16.4728C4 21.9089 7.43839 26.5209 12.2064 28.1478C12.8061 28.2617 13.0263 27.8809 13.0263 27.5559C13.0263 27.2625 13.0152 26.2933 13.01 25.2652C9.67157 26.0095 8.96712 23.8135 8.96712 23.8135C8.42125 22.3914 7.63473 22.0132 7.63473 22.0132C6.54596 21.2496 7.7168 21.2653 7.7168 21.2653C8.92181 21.3521 9.55632 22.5332 9.55632 22.5332C10.6266 24.4142 12.3636 23.8704 13.0484 23.556C13.1561 22.7608 13.4671 22.218 13.8102 21.9107C11.1449 21.5996 8.34295 20.5446 8.34295 15.8301C8.34295 14.4868 8.81172 13.3893 9.57937 12.5276C9.45477 12.2177 9.04402 10.9663 9.69562 9.27156C9.69562 9.27156 10.7033 8.94088 12.9965 10.5327C13.9537 10.2601 14.9803 10.1234 16.0001 10.1187C17.0199 10.1234 18.0473 10.2601 19.0063 10.5327C21.2967 8.94088 22.303 9.27156 22.303 9.27156C22.9562 10.9663 22.5452 12.2177 22.4206 12.5276C23.1901 13.3893 23.6557 14.4868 23.6557 15.8301C23.6557 20.5558 20.8484 21.5963 18.1762 21.901C18.6067 22.2828 18.9902 23.0315 18.9902 24.1794C18.9902 25.8257 18.9763 27.1507 18.9763 27.5559C18.9763 27.8833 19.1923 28.267 19.8006 28.1462C24.566 26.5174 28 21.9071 28 16.4728C28 9.67742 22.6273 4.16895 16.0001 4.16895Z" fill="white"/>
+                    <path d="M8.58043 21.7501C8.55405 21.8106 8.46043 21.8288 8.37514 21.7872C8.28827 21.7475 8.23947 21.665 8.26764 21.6042C8.29342 21.5419 8.38724 21.5246 8.47392 21.5663C8.56099 21.6061 8.61058 21.6894 8.58043 21.7501Z" fill="white"/>
+                    <path d="M9.06559 22.3004C9.00846 22.3543 8.89679 22.3293 8.82103 22.2441C8.74268 22.1592 8.728 22.0456 8.78592 21.991C8.84483 21.9371 8.95312 21.9623 9.03167 22.0473C9.11002 22.1332 9.12529 22.246 9.06559 22.3004Z" fill="white"/>
+                    <path d="M9.53784 23.0021C9.46445 23.0539 9.34445 23.0053 9.27027 22.897C9.19688 22.7886 9.19688 22.6587 9.27186 22.6067C9.34624 22.5546 9.46445 22.6014 9.53963 22.709C9.61282 22.8191 9.61282 22.949 9.53784 23.0021Z" fill="white"/>
+                    <path d="M10.1848 23.6799C10.1192 23.7535 9.97936 23.7338 9.87701 23.6333C9.77229 23.5351 9.74313 23.3957 9.80898 23.322C9.87543 23.2482 10.0161 23.269 10.1192 23.3686C10.2231 23.4667 10.2549 23.6071 10.1848 23.6799Z" fill="white"/>
+                    <path d="M11.0774 24.0735C11.0485 24.1689 10.9138 24.2123 10.7781 24.1717C10.6426 24.13 10.554 24.0182 10.5813 23.9218C10.6095 23.8258 10.7448 23.7806 10.8814 23.8239C11.0167 23.8655 11.1056 23.9765 11.0774 24.0735Z" fill="white"/>
+                    <path d="M12.0576 24.1465C12.061 24.247 11.946 24.3303 11.8036 24.3321C11.6604 24.3354 11.5445 24.2541 11.5429 24.1552C11.5429 24.0537 11.6554 23.9712 11.7986 23.9688C11.941 23.966 12.0576 24.0467 12.0576 24.1465Z" fill="white"/>
+                    <path d="M12.9699 23.9886C12.9869 24.0866 12.8879 24.1873 12.7465 24.2141C12.6075 24.2399 12.4787 24.1794 12.4611 24.0822C12.4438 23.9817 12.5446 23.881 12.6834 23.855C12.8251 23.83 12.9518 23.8889 12.9699 23.9886Z" fill="white"/>
+                </svg>                    
+            </a>
+            <a href="https://il.linkedin.com/company/anima-app" target="_blank">
+                <div class="circle">
+                    <svg class="circle__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                    </svg>
+                </div>                  
+            </a>
+        </div>
+        <p class="footer__p">© 2023 Anima’s Landing Page Ui Kit.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

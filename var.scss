@@ -1,0 +1,39 @@
+// Colors
+$body-bg: #F8F9FF;
+$main-white: #FFF;
+$secondary-white: #ECECEC;
+$main-yellow: #F8D57E;
+$secondary-yellow: #fef7e5;
+$main-pink: #F2BFAF;
+$secondary-pink: #ffe0dc;
+$main-green: #009379;
+$secondary-green: #E5F4F2;
+$third-green: #cce9e4;
+$fourth-green: #2f3734;
+$fifth-green: #527e70;
+$sixth-green: #40917a;
+$seventh-green: #e5f4f2;
+$main-black: #2D2D2D;
+$secondary-black: #000000;
+$main-gray: #d8d8d8;
+$secondary-gray: #374151;
+$main-blue: #111827;
+
+
+// Mixins
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin button {
+    display: flex;
+    height: 60px;
+    padding: 16px 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 20px;
+    background: $main-green;
+    border: none;
+}

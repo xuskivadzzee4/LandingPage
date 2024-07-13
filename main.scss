@@ -1,0 +1,145 @@
+@import "var";
+@import "fonts";
+
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: $body-bg;
+}
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+    padding: 0;
+}
+.hero {
+    & .navbar {
+        padding: 20px 50px;
+        & a {
+            text-decoration: none;
+        }
+        & .logo {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            &__p {
+                color: $main-black;
+                font-size: 16px;
+                font-weight: 700;
+            }
+            &__span {
+                font-weight: 400;
+            }
+        }
+        & .menu {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            &__span {
+                color: $main-green;
+                font-weight: 600;
+                cursor: pointer;
+            }
+            & .buttons {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                &__button {
+                    @include button;
+                    font-weight: 600;
+                    line-height: 24px;
+                    &--light {
+                        background: $secondary-green;
+                        color: $main-green;
+                    }
+                    &--light2 {
+                        display: none;
+                    }
+                    &--dark {
+                        color: $main-white;
+                    }
+                    &--dark2 {
+                        color: $main-white;
+                    }
+                }
+            }
+        }
+    }
+    & .bar {
+        & .logos {
+            &__logo {
+                background-size: 70% 70%;
+                background-position: center;
+                background-repeat: no-repeat;
+                cursor: pointer;
+            }
+            & #logos_1 {
+                background-image: url("https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg");
+            }
+            & #logos_2 {
+                background-image: url("https://angular.io/assets/images/logos/angular/angular.svg");
+            }
+            & #logos_3 {
+                background-image: url("https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg");
+            }
+            & #logos_4 {
+                background-size: 60% 60%;
+                background-image: url("https://www.vectorlogo.zone/logos/figma/figma-icon.svg");
+            }
+            & #logos_5 {
+                background-size: 60% 60%;
+                background-image: url("https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg");
+            }
+            & #logos_6 {
+                background-size: 60% 60%;
+                background-image: url("https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg");
+            }
+        }
+    }
+}
+.typeform {
+    & .quiz {
+        min-height: 370px;
+        & .screen {
+            min-height: 370px;
+        }
+    }
+}
+.FAQ {
+    gap: 40px;
+    & .accordion {
+        width: 80%;
+        &-item {
+            max-width: 810px;
+            margin: auto;
+            box-shadow: 0px 7.813px 15.625px 0px rgba(41, 41, 42, 0.07);
+        }
+        &-button {
+            font-family: PoppinsMedium;
+            background: $sixth-green;
+            font-size: 18px;
+            padding: 21px;
+        }
+        &-body {
+            font-family: PoppinsMedium;
+            font-size: 18px;
+        }
+    }
+}
+.features {
+    .cards {
+        & .card {
+            &__span {
+                cursor: pointer
+            }
+        }
+    }
+}
+@import "mobile";
+@import "tablet";
+@import "desktop";
