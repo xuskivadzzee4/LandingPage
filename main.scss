@@ -110,6 +110,9 @@ h1,h2,h3,h4,h5,h6,p {
         }
     }
 }
+.subscribe {
+    scroll-margin-top: 330px;
+}
 .FAQ {
     gap: 40px;
     & .accordion {
@@ -134,12 +137,31 @@ h1,h2,h3,h4,h5,h6,p {
 .features {
     .cards {
         & .card {
+            box-shadow: 0 0 10px black;
+            &:hover {
+                transform: translateY(-15px);
+                box-shadow: 0 5px 10px black;
+                transition: 250ms;
+            }
             &__span {
                 cursor: pointer
             }
         }
     }
 }
+.testimonials, .team {
+    .cards {
+        .card {
+            box-shadow: 0 0 10px black;
+            &:hover {
+                transform: translateY(-15px);
+                box-shadow: 0 5px 10px black;
+                transition: 300ms;
+            }
+        }
+    }
+}
+
 @import "mobile";
 @import "tablet";
 @import "desktop";

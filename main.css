@@ -150,6 +150,10 @@ h1, h2, h3, h4, h5, h6, p {
   min-height: 370px;
 }
 
+.subscribe {
+  scroll-margin-top: 330px;
+}
+
 .FAQ {
   gap: 40px;
 }
@@ -172,8 +176,25 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 18px;
 }
 
+.features .cards .card {
+  box-shadow: 0 0 10px black;
+}
+.features .cards .card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 5px 10px black;
+  transition: 250ms;
+}
 .features .cards .card__span {
   cursor: pointer;
+}
+
+.testimonials .cards .card, .team .cards .card {
+  box-shadow: 0 0 10px black;
+}
+.testimonials .cards .card:hover, .team .cards .card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 5px 10px black;
+  transition: 300ms;
 }
 
 @media screen and (max-width: 779px) {
@@ -818,11 +839,6 @@ h1, h2, h3, h4, h5, h6, p {
   }
   .typeform .quiz .screen .content .answers__answer p {
     color: #40917a;
-  }
-  .typeform .quiz .screen .content .answers__add {
-    text-decoration: underline;
-    color: #40917a;
-    cursor: pointer;
   }
   .FAQ {
     display: flex;
@@ -1563,11 +1579,6 @@ h1, h2, h3, h4, h5, h6, p {
   .typeform .quiz .screen .content .answers__answer p {
     color: #40917a;
   }
-  .typeform .quiz .screen .content .answers__add {
-    text-decoration: underline;
-    color: #40917a;
-    cursor: pointer;
-  }
   .FAQ {
     display: flex;
     flex-direction: column;
@@ -2270,11 +2281,6 @@ h1, h2, h3, h4, h5, h6, p {
   }
   .typeform .quiz .screen .content .answers__answer p {
     color: #40917a;
-  }
-  .typeform .quiz .screen .content .answers__add {
-    text-decoration: underline;
-    color: #40917a;
-    cursor: pointer;
   }
   .FAQ {
     display: flex;
